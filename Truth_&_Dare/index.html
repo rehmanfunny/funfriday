@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Truth or Dare Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Truth or Dare Game</h1>
+    <div id="setup-section">
+      <label for="player-names">Enter player names (comma-separated):</label>
+      <input type="text" id="player-names" placeholder="E.g., Alice, Bob, Charlie">
+      <button id="start-button">Start Game</button>
+    </div>
+
+    <div id="game-section" class="hidden">
+      <h2 id="current-player"></h2>
+      <div class="wheel-container">
+        <div id="wheel">
+          <div class="slice"></div>
+          <div class="slice"></div>
+          <div class="arrow"></div>
+        </div>
+        <button id="spin-button" class="btn">Spin the Wheel</button>
+      </div>
+
+      <div id="task-section" class="hidden">
+        <h3>Choose an option:</h3>
+        <button id="truth-button" class="btn truth">Truth</button>
+        <button id="dare-button" class="btn dare">Dare</button>
+        <p id="task-output"></p>
+        <button id="next-button" class="btn hidden">Next Player</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

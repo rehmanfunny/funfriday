@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-image: url('https://img.freepik.com/premium-vector/truth-dare-typography-with-spooky-skull-background-vector-design_468322-1182.jpg?w=740');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8); /* Transparent black background */
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Header */
+h1 {
+  font-size: 32px;
+  color: #ffeb3b; /* Bright yellow */
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+#start-button {
+  background-color: #4caf50;
+}
+
+#spin-button {
+  background-color: #f9a825;
+}
+
+.truth {
+  background-color: #2196f3;
+}
+
+.dare {
+  background-color: #e91e63;
+}
+
+#next-button {
+  background-color: #673ab7;
+}
+
+/* Input */
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px 0;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+}
+
+/* Wheel */
+.wheel-container {
+  position: relative;
+  margin: 20px auto;
+  width: 300px;
+  height: 300px;
+}
+
+#wheel {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, #ff7e5f, #feb47b);
+  position: relative;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+.slice {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform-origin: left center;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.slice:nth-child(1) {
+  transform: rotate(0deg);
+  background-color: #4caf50;
+}
+
+.slice:nth-child(2) {
+  transform: rotate(180deg);
+  background-color: #f44336;
+}
+
+.arrow {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 30px solid #ffffff;
+  transform: translateX(-50%);
+}
+
+/* Hidden Class */
+.hidden {
+  display: none;
+}
